@@ -8,7 +8,7 @@
 	
 	
 	
-	<title>面向菜鸟编程-数据类型 ｜ whitepure&#39;s_blog</title>
+	<title>面向菜鸟编程-数据类型篇 ｜ whitepure&#39;s_blog</title>
 	
     
     
@@ -89,10 +89,114 @@
             <div class="post_page">
                 <div class="post animate__animated animate__fadeInDown">
                     <div class="post_title post_detail_title">
-                        <h2><a href='/myspace/posts/rookie/rookie-datatype/'>面向菜鸟编程-数据类型</a></h2>
+                        <h2><a href='/myspace/posts/rookie/rookie-datatype/'>面向菜鸟编程-数据类型篇</a></h2>
                         <span class="date">2021.01.20</span>
                     </div>
-                    <div class="post_content markdown"><h2 id="基本类型">基本类型</h2>
+                    <div class="post_content markdown"><ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B">基本类型</a>
+<ul>
+<li><a href="#%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B">数值类型</a>
+<ul>
+<li><a href="#%E6%95%B4%E5%9E%8B">整型</a></li>
+<li><a href="#%E6%B5%AE%E7%82%B9%E5%9E%8B">浮点型</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B">字符类型</a></li>
+<li><a href="#%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B">布尔类型</a></li>
+</ul>
+</li>
+<li><a href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">类型转换</a>
+<ul>
+<li><a href="#%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">自动类型转换</a></li>
+<li><a href="#%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">隐式类型转换</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B">包装类型</a>
+<ul>
+<li><a href="#%E6%8B%86%E7%AE%B1%E4%B8%8E%E8%A3%85%E7%AE%B1">拆箱与装箱</a>
+<ul>
+<li><a href="#%E8%87%AA%E5%8A%A8%E6%8B%86%E8%A3%85%E7%AE%B1">自动拆装箱</a></li>
+<li><a href="#%E8%87%AA%E5%8A%A8%E6%8B%86%E8%A3%85%E7%AE%B1%E5%B8%A6%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98">自动拆装箱带来的问题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BC%93%E5%AD%98%E6%B1%A0">缓存池</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B">引用类型</a>
+<ul>
+<li><a href="#%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%8C%BA%E5%88%AB">与基本类型区别</a></li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B8%B8%E9%87%8F">常量</a>
+<ul>
+<li><a href="#%E5%AE%9A%E4%B9%89">定义</a></li>
+<li><a href="#%E5%B8%B8%E9%87%8F%E6%B1%A0">常量池</a>
+<ul>
+<li><a href="#class%E5%B8%B8%E9%87%8F%E6%B1%A0">Class常量池</a>
+<ul>
+<li><a href="#class%E6%96%87%E4%BB%B6">Class文件</a></li>
+<li><a href="#%E5%AD%98%E6%94%BE%E5%86%85%E5%AE%B9">存放内容</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B8%B8%E9%87%8F%E6%B1%A0">运行时常量池</a>
+<ul>
+<li><a href="#%E5%AD%98%E6%94%BE%E4%BD%8D%E7%BD%AE%E5%8F%8A%E5%AD%98%E6%94%BE%E6%9D%A5%E6%BA%90">存放位置及存放来源</a></li>
+</ul>
+</li>
+<li><a href="#string%E5%B8%B8%E9%87%8F%E6%B1%A0">String常量池</a>
+<ul>
+<li><a href="#intern">intern()</a></li>
+<li><a href="#%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B">经典案例</a></li>
+<li><a href="#%E4%BC%98%E7%82%B9">优点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#string-%E7%B1%BB">String 类</a>
+<ul>
+<li><a href="#%E6%A6%82%E8%A7%88">概览</a></li>
+<li><a href="#%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%80%A7%E4%BC%98%E7%82%B9">不可变性优点</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8">使用</a>
+<ul>
+<li><a href="#%E5%88%9B%E5%BB%BA%E5%AD%97%E7%AC%A6%E4%B8%B2">创建字符串</a></li>
+<li><a href="#%E8%BF%9E%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2">连接字符串</a>
+<ul>
+<li><a href="#%E8%BF%9E%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2">&quot;+&ldquo;连接字符串</a></li>
+<li><a href="#concat%E6%96%B9%E6%B3%95">concat方法</a></li>
+<li><a href="#stringbuffer%E5%92%8Cstringbuilder">StringBuffer和StringBuilder</a></li>
+<li><a href="#%E6%AF%94%E8%BE%83%E5%92%8C%E4%BD%BF%E7%94%A8">比较和使用</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95">常用方法</a>
+<ul>
+<li><a href="#substring">substring</a></li>
+<li><a href="#replace">replace</a></li>
+<li><a href="#replaceall">replaceAll</a></li>
+<li><a href="#valueof">valueOf</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E9%95%BF%E5%BA%A6%E9%99%90%E5%88%B6">长度限制</a></li>
+<li><a href="#%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98">编码问题</a>
+<ul>
+<li><a href="#unicode">Unicode</a></li>
+<li><a href="#%E4%B9%B1%E7%A0%81%E5%8E%9F%E5%9B%A0">乱码原因</a></li>
+<li><a href="#%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95">相关方法</a>
+<ul>
+<li><a href="#getbytesstring-charsetname">getBytes(String charsetName)</a></li>
+<li><a href="#new-stringbyte-bytes-string-charsetname">new String(byte bytes[], String charsetName)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="基本类型">基本类型</h2>
 <p>Java语言提供了八种基本类型。六种数值类型（四个整数型，两个浮点型），一种字符类型，还有一种布尔型.  <strong>俗称4类8种</strong></p>
 <p>这里只介绍称4类8种.实际上，JAVA中还存在另外一种基本类型 void，它也有对应的包装类<code>java.lang.Void</code>，不过我们无法直接对它们进行操作.</p>
 <blockquote>
