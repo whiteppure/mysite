@@ -6,6 +6,8 @@ function close_pic_box() {
         'top': '-1000px'
     }, 500);
 }
+
+// 头像旋转
 $(".my_box").click(function () {
     $(".pic_box").animate({
         'top': '15px',
